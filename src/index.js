@@ -1,7 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import ReactDOM from 'react-dom/client';//Biblioteca de React para hablar con los navegadores web (React DOM)
+
+import './index.css';//estilos para tus componentes
+import App from './App';//el componnete que se creo en app.js
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

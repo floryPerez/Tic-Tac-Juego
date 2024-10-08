@@ -1,0 +1,220 @@
+/* Estilos generales para el juego */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .game {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos para el tablero */
+  .board-row {
+    display: flex;
+  }
+  
+  .square {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 80px;
+    width: 80px;
+    margin-right: -1px;
+    margin-top: -1px;
+    text-align: center;
+    vertical-align: middle;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .square:hover {
+    background-color: #f3f3f3;
+  }
+  
+  .square:active {
+    background-color: #e6e6e6;
+  }
+  
+  /* Resaltar los cuadrados ganadores */
+  .square.highlight {
+    background-color: #ffeb3b; /* Color amarillo para destacar */
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { background-color: #ffeb3b; }
+    50% { background-color: #ffe155; }
+    100% { background-color: #ffeb3b; }
+  }
+  
+  /* Estilos para el estado */
+  .status {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Historial de movimientos */
+  .game-info ol {
+    padding-left: 30px;
+  }
+  
+  .game-info li {
+    margin-bottom: 5px;
+  }
+  
+  .game-info button {
+    background-color: #008cba;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .game-info button:hover {
+    background-color: #005f5f;
+  }
+  
+  .game-info button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Botón de alternancia para ordenar */
+  button.toggle-button {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #673ab7;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.toggle-button:hover {
+    background-color: #512da8;
+  }
+  
+  /* Añadir un poco de animación al hacer clic en los cuadrados */
+  @keyframes squareClick {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  .square:active {
+    animation: squareClick 0.2s ease-out;
+  }
+  
+
+  /* Estilos para el modal del ganador */
+  .modal {
+    display: flex; /* Cambiar a flex cuando se muestre */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: rgb(10, 147, 151);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .modal-content p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .modal-content .close {
+    color: red;
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    margin-left: 15px;
+  }
+  .square.highlight {
+    background-color: yellow; /* O el color que prefieras para resaltar */
+    font-weight: bold;
+  }
+
+  /*estilos para los titulos
+  */
+
+/* Selecciona la clase 'letras' */
+.letras {
+    /* Establece el tamaño de la fuente a 40px */
+    font-size: 40px;
+    
+    /* Cambia el color del texto a azul */
+    color: blue;
+    
+    /* Centra el texto horizontalmente */
+    text-align: center;
+    
+    /* Cambia la fuente a 'Arial', una fuente más bonita */
+    font-family: 'Arial', sans-serif;
+    
+    /* Añade un poco de espacio alrededor del texto */
+    margin: 20px;
+    /* Posiciona el elemento relativamente */
+    position: relative;
+    
+    /* Mueve el texto hacia arriba */
+    top: -80px;
+}
+
+/**ESTILOS PARA EL HEADER Y EL FOOTER*/
+body {
+    margin: 0; /* Elimina los márgenes predeterminados */
+    font-family: Arial, sans-serif; /* Ajusta la fuente si es necesario */
+  }
+  
+  .header {
+    width: 100%;
+    padding: 5px;
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    position: absolute; /* Para que se mantenga al final de la página */
+    top: 0;
+    left: 0;
+  }
+  .footer {
+    width: 100%;
+    padding: 20px;
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    position: absolute; /* Para que se mantenga al final de la página */
+    bottom: 0;
+    left: 0;
+  }
+  

@@ -1,0 +1,22 @@
+componente:
+    Es una pieza de código reutilizzable quue representa una parte de una interfaz de usuario.
+export :
+    hace que esta función sea accesible fuera de este archivo. 
+Default : le dice a otros archivos que usan su código que es la función principal en su archivo
+
+return: significa que lo que viene después se devuelve como un valor a la persona que llama a la función. 
+
+<button> es un elemento JSX
+
+Un elemento JSX es una combinación de código JavaScript y etiquetas HTML que describe lo que te gustaría mostrar.
+
+className="square" es una propiedad de botón o prop que le dice a CSS cómo diseñar el botón. 
+
+function Square({ value }) indica que al componente Square se le puede pasar un objeto llamado value.
+
+En React, es convencional usar nombres on[Event] para props que representan eventos y handle[Event] para las definiciones de funciones que controlan los eventos.
+
+
+La inmutabilidad hace que las características complejas sean mucho más fáciles de implementar. 
+
+. La inmutabilidad hace que sea muy barato para los componentes comparar si sus datos han cambiado o no
